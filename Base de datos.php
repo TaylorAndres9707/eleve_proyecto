@@ -1,27 +1,12 @@
 <?php
-// Conexión a la base de datos
-$host = 'localhost';
-$dbname = 'restaurante';
-$username = 'root';
-$password = '';
+$host = "localhost";
+$user = "root";     // Cambia si tu MySQL usa otro usuario
+$pass = "";         // Si usas XAMPP esto normalmente queda vacío
+$db   = "restaurante";    // Nombre de tu base de datos
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Error en la conexión: " . $conn->connect_error);
 }
-
-// Obtener los datos del formulario
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-// Consulta SQL para insertar los datos en la base de datos
-$sql = "INSERT INTO usuarios (username, password) VALUES (:username, :password)";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['username' => $username, 'password' => $password]);
-
-// Redireccionar al usuario a la página de inicio de sesión exitosa
-header('Location: login_success.php');
-exit();
 ?>

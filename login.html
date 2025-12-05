@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Éleve</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<form class="login-box" action="procesar_login.php" method="POST">
+<div class="login-container">
 
-    <h1>Éleve</h1>
+    <!-- Capa oscura sobre el fondo -->
+    <div class="login-overlay"></div>
 
-    <label for="username">Usuario</label>
-    <input type="text" id="username" name="username" required>
+    <form class="login-box" action="menu.html">
 
-    <label for="password">Contraseña</label>
-    <input type="password" id="password" name="password" required>
+       
 
-    <button type="submit" class="btn-login">Iniciar Sesión</button>
+        <h1>Éleve</h1>
 
-    <a href="registro.html" class="btn-register">Registrarse</a>
+        <label>Usuario</label>
+        <input type="text" required>
 
-</form>
+        <label>Contraseña</label>
+        <input type="password" required>
+
+        <button type="submit" class="btn-login">Iniciar Sesión</button>
+
+        <a href="registro.html" class="btn-register">Registrarse</a>
+
+    </form>
+
+</div>
 
 </body>
 </html>

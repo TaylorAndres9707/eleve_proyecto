@@ -353,8 +353,8 @@ h2 {
     transform: translate(-50%, -50%);
     font-size: 55px;
     font-weight: bold;
-    color: white;
-    text-shadow: 0 4px 10px #000;
+    color: black;
+    
 }
 
 /* ------------ HERO SIMPLE (SECCIÓN CON IMAGEN) ------------ */
@@ -489,7 +489,7 @@ h2 {
     color: #fff;
     font-family: "Playfair Display", serif;
     font-size: 20px;
-    text-shadow: 0 6px 18px rgba(253, 246, 246, 0.45);
+    text-shadow: 0 6px 18px rgba(104, 98, 98, 0.45);
 }
 
 .overlay p {

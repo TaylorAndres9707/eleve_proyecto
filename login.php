@@ -1,5 +1,5 @@
 <?php
-// Datos de conexión (AJÚSTALOS A TU BASE)
+// Datos de conexión 
 $host = "localhost";
 $usuario_db = "root";
 $password_db = "";
@@ -28,7 +28,7 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 
-    // Comparar contraseñas SIN encriptar (modo fácil)
+    // Comparar contraseñas SIN encriptar 
     if ($password === $row['password']) {
         // Login correcto
         header("Location: menu.html");

@@ -12,17 +12,16 @@
     <!-- Capa oscura sobre el fondo -->
     <div class="login-overlay"></div>
 
-    <form class="login-box" action="menu.html">
-
-       
+    <!-- FORMULARIO CORREGIDO -->
+    <form class="login-box" action="login.php" method="POST">
 
         <h1>Éleve</h1>
 
         <label>Usuario</label>
-        <input type="text" required>
+        <input type="text" name="usuario" required>
 
         <label>Contraseña</label>
-        <input type="password" required>
+        <input type="password" name="password" required>
 
         <button type="submit" class="btn-login">Iniciar Sesión</button>
 

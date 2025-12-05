@@ -15,7 +15,8 @@ if ($conn->connect_error) {
 $nombre  = $_POST['nombre'];
 $correo  = $_POST['correo'];
 $usuario = $_POST['usuario'];
-$password = $_POST['password'];
+
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 // Validar usuario o correo existente
 $sql_verificar = "SELECT * FROM usuarios WHERE usuario = ? OR correo = ?";
@@ -39,6 +40,7 @@ if ($stmt->execute()) {
     echo "<a href='login.html'>Iniciar sesión</a>";
 } else {
     echo "<h2>❌ Error al registrar</h2>";
+    echo "<a href='registro.html'>Volver al registro</a>";
 }
 
 $conn->close();
